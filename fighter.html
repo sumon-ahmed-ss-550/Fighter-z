@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .fighter-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(8, 250px);
+        gap: 10px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .large-fighter {
+        grid-column: span 4;
+        grid-row: span 3;
+      }
+      .medium-fighter {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      .small-fighter {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+      @media only screen and (max-width: 992px) {
+        .fighter-container {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(6, 250px);
+        }
+        .large-fighter,
+        .medium-fighter,
+        .small-fighter {
+          grid-column: span 1;
+        }
+        .large-fighter {
+          grid-row: span 2;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .fighter-container {
+          grid-template-rows: repeat(5, 250px);
+        }
+        .large-fighter {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
+        .medium-fighter {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
+      }
+      @media only screen and (max-width: 576px) {
+        .fighter-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fighter-container">
+      <div class="large-fighter">
+        <img src="./images/A.avif" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/B.avif" alt="" />
+      </div>
+      <div class="medium-fighter">
+        <img src="./images/C.webp" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/D.jpg" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/E.avif" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/F.webp" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/G.jpg" alt="" />
+      </div>
+      <div class="medium-fighter">
+        <img src="./images/H.webp" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/I.jpg" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/J.jpg" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/K.jpg" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/D.jpg" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/F.webp" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/B.avif" alt="" />
+      </div>
+      <div class="small-fighter">
+        <img src="./images/C.webp" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
